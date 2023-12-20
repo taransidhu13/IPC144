@@ -1,0 +1,99 @@
+///////////////////////////////////////////////////////////////////////////
+                              Reflection
+                          Workshop - #2 (P2)
+Full Name  : Tarandeep Kaur
+Student ID#: 139389225
+Email      : tarandeep-kaur6@myseneca.ca
+Section    : ZDD
+
+Authenticity Declaration:
+
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+///////////////////////////////////////////////////////////////////////////
+
+1. Given the following C statements:
+float price1 = 17.96f, price3 = 17.98f;
+double price2 = 17.96, price4 = 17.98;
+printf("1. 17.96 = %f (as cents:%d)\n", price1, (int)(price1 * 100));
+printf("2. 17.96 = %lf (as cents:%d)\n", price2, (int)(price2 * 100));
+printf("3. 17.98 = %f (as cents:%d)\n", price3, (int)(price3 * 100));
+printf("4. 17.98 = %lf (as cents:%d)\n", price4, (int)(price4 * 100));
+Execute the above sample code on your machine. Briefly explain why price1 
+and the corresponding converted cent value does not properly represent
+the intended value. Why do you think all the other samples work as 
+expected?
+
+Answer: The code has a problem with price1 and its corresponding cent 
+value not representing the intended value accurately. This occurs 
+because floating-point data types, like float, have limitations in 
+precisely representing decimal numbers. When price1 is multiplied by 
+100 and converted to an integer, a small rounding error can happen, 
+causing an inaccurate cent value. However, price2, price3, and price4 
+are declared as double types, which offer higher precision. Therefore, 
+their cent values are more likely to be accurate. To handle decimal 
+values precisely, it's recommended to use fixed-point arithmetic or 
+specialized decimal data types.
+
+2. Execute the below code on your machine:
+int money = 7245;
+printf("1. $%.2lf\n", money / 100.0);
+printf("2. $%.2lf\n", money / (double)100);
+printf("3. $%.2lf\n", (double)money / 100);
+Explain why these three examples work as intended. Apply terms like cast,
+promotion, coercion, implicit, and explicit in your answer.
+
+Answer: These three examples work as intended, providing the correct output. 
+This is because they handle the division properly using type casting and 
+promotion.
+In Example 1, by dividing money by 100.0, the result is automatically 
+promoted to a floating-point value, ensuring accurate division.
+In Example 2, explicit casting (double)100 converts the integer value
+100 to a double type before division, maintaining precision. 
+In Example 3, casting (double)money coerces the integer money value 
+to a double type, allowing accurate division by 100.
+Casting is a way to convert values from one type to another explicitly.
+Promotion automatically converts values to wider types. 
+Coercion implicitly converts values to different types for compatibility. 
+Implicit conversions are performed automatically by the compiler, while 
+explicit conversions are instructed by the programmer using casting.
+
+3. Execute the following code on your machine:
+int result, money = 7245;
+result = money / 100;
+printf("1. $%.2lf\n", money / 100);
+printf("2. $%d\n", money / 100);
+printf("3. $%.2lf\n", result);
+printf("4. $%d\n", result);
+Apply terms like cast, promotion, truncation, coercion, implicit, and 
+explicit in answering the following questions.
+a) What is the value of the variable result? Explain why.
+b) What values are displayed for samples 1, 2, 3, and 4?
+c) What can you conclude about the printf function that causes samples 
+1 and 3 not to work as expected?
+
+Answer:a) The value of the variable result is 72. This is because when 
+money is divided by 100 using integer division, the fractional part is 
+truncated, and only the integer quotient is stored in result.
+
+b) The values displayed for the samples are as follows:
+
+Sample 1: $0.00. The division money / 100 is performed using integer 
+division, resulting in 0. However, the %lf format specifier in printf 
+expects a double argument, so it interprets the 0 as 0.00.
+Sample 2: $72. Since the division money / 100 is an integer division, 
+the result is 72, and %d format specifier in printf treats it as an 
+integer, displaying 72.
+Sample 3: $0.00. Here, the value of result is 72, but when printing 
+with %lf, which expects a double argument, the integer 72 is implicitly 
+converted to 0.00.
+Sample 4: $72. The %d format specifier treats result as an integer, so
+it displays the value 72.
+
+c) The issue with samples 1 and 3 not working as expected is the mismatch 
+between the format specifier used in printf and the actual types of the
+values being printed. To display the correct values, one should use %d for 
+integers and %lf or %f for doubles, based on the types of the values 
+being printed.
+

@@ -1,0 +1,12 @@
+﻿  w2p2.c
+C:\Users\kaurt\source\repos\Workshop2\w2p2.c(129,28): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\kaurt\source\repos\Workshop2\w2p2.c(133,30): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\kaurt\source\repos\Workshop2\w2p2.c(137,26): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\kaurt\source\repos\Workshop2\w2p2.c(141,29): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\kaurt\source\repos\Workshop2\w2p2.c(145,33): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\kaurt\source\repos\Workshop2\w2p2.c(97,1): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\kaurt\source\repos\Workshop2\w2p2.c(101,1): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\kaurt\source\repos\Workshop2\w2p2.c(105,1): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\kaurt\source\repos\Workshop2\w2p2.c(109,1): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\kaurt\source\repos\Workshop2\w2p2.c(113,1): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  Workshop2.vcxproj -> C:\Users\kaurt\source\repos\Workshop2\Debug\Workshop2.exe
