@@ -1,0 +1,52 @@
+///////////////////////////////////////////////////////////////////////////
+                               Reflection
+                             Workshop - #6
+Full Name  : Tarandeep Kaur
+Student ID#: 139389225
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+///////////////////////////////////////////////////////////////////////////
+
+
+Answer 1: There are three types of iteration constructs: 
+for loops, while loops, and do-while loops. Although it is possible to achieve 
+the same behavior using any of these constructs, I prefer using the for loop when working 
+with arrays. The for loop provides a concise and structured way to iterate over the 
+elements of an array. By defining the loop initialization, condition, and 
+increment/decrement in a single line, the code becomes more readable and the loop control 
+variables are contained within the loop's scope. This makes the for loop the more preferred
+option when working with arrays.
+
+Answer 2: To test and debug my program, I followed a systematic approach. For syntactic errors, 
+I relied on the compiler to help me identify and report any issues. The compiler provided error 
+messages that pointed out the specific lines causing problems. By carefully reviewing these 
+error messages, I was able to locate and fix syntax errors such as missing semicolons, mismatched 
+parentheses, or incorrect variable types.
+For semantic errors, I employed a combination of techniques. Firstly, I used print statements
+strategically placed throughout the code to print intermediate values and track the flow of the 
+program. By observing the output of these print statements, I could identify any inconsistencies
+or unexpected behaviors in the program's logic. This allowed me to narrow down the location 
+of the issue.
+Additionally, I utilized a debugger to step through the code line by line. Using the debugger,
+I could inspect the values of variables at different points in the program and analyze the 
+execution flow. By closely examining the variable values and comparing them to my expectations,
+I could pinpoint semantic errors and correct them accordingly.
+
+Answer 3: To successfully identify and fix the error, I will follow these steps:
+
+A. I will open the output.txt file and locate line number 6 as indicated in the error message.
+B. I will compare the character at column 33 in my output with the expected character, which is 
+ASCII code 48 (the character '0').
+C. If my output contains a different character (ASCII code not equal to 48), it means there is an 
+error in printing the expected value.
+D. I will review the corresponding part of my code responsible for printing the monthly NET income.
+E. I will ensure that the correct input is being given (here, 0) and then, read and stored in the 
+income variable before it is printed.
+F. I will make any necessary corrections to ensure that the output matches the expected output,
+i.e., "Enter your monthly NET income: $0".
+
+By following these steps, I will be able to identify and rectify the error in the output, allowing me
+to successfully submit my work.

@@ -1,0 +1,5 @@
+﻿  a1ms3.c
+  clinic.c
+C:\Users\kaurt\source\repos\MS3\clinic.c(420,13): warning C4098: 'removePatient': 'void' function returning a value
+  Generating Code...
+  MS3.vcxproj -> C:\Users\kaurt\source\repos\MS3\x64\Debug\MS3.exe

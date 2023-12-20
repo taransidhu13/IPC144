@@ -1,0 +1,4 @@
+﻿  clinic.c
+C:\Users\kaurt\source\repos\Milestone 2\clinic.c(381,13): warning C4013: 'strncmp' undefined; assuming extern returning int
+C:\Users\kaurt\source\repos\Milestone 2\clinic.c(458,9): warning C4013: 'strncpy' undefined; assuming extern returning int
+  Milestone 2.vcxproj -> C:\Users\kaurt\source\repos\Milestone 2\x64\Debug\Milestone 2.exe

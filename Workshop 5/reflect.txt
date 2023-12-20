@@ -1,0 +1,72 @@
+///////////////////////////////////////////////////////////////////////////
+                               Reflection
+                             Workshop - #5
+Full Name  : Tarandeep Kaur
+Student ID#: 139389225
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+///////////////////////////////////////////////////////////////////////////
+
+Answer 1: a) Readability and Maintainability:
+Example: The MIN_YEAR and MAX_YEAR macros are used to define the range of valid years as 
+2012 and 2022 respectively.
+Advantages:
+If the code used the literal values of 2012 and 2022 directly, it would be less clear why 
+those specific values were chosen. However, by using the macros with meaningful names, 
+it becomes self-explanatory that the valid year range is between 2012 and 2022.
+If the valid year range needs to be changed, modifying the macros in one place 
+(the macro definition) automatically updates all instances in the code that rely on 
+those values. This ensures consistency and avoids errors that could occur if the values 
+were manually changed throughout the code.
+
+b) Flexibility and Adaptability:
+Example: The JAN and DEC constants represent the months January and December respectively.
+Advantages:
+If additional months were added to the program, there would be no need to search and modify 
+all instances where the month names appear in the code. The constants can be easily extended
+to include the new months, providing flexibility to adapt to changes without extensive code modifications.
+By using constants, the code becomes more adaptable to different contexts. For example, if the code were 
+part of a larger application where multiple modules or functions need to refer to the same months,
+using constants ensures consistency across different parts of the code.
+
+c) Code Consistency and Scalability:
+Example: The variables morningTotal, eveningTotal, and overallTotal are used to accumulate the ratings.
+Advantages:
+Instead of duplicating code to calculate totals at multiple points, using variables allows the code to 
+consistently accumulate ratings in a centralized manner. This ensures that all instances in the codebase 
+follow the same logic and reduces the risk of introducing errors or inconsistencies.
+If the code were to be expanded to include more than three log days, using variables to store totals allows
+for easy scalability. The same code logic can handle any number of log days without requiring significant 
+modifications. This promotes code reusability and maintainability.
+
+
+
+Answer 2: a) Separation of Concerns:
+Example: The do-while loops are used to validate the morning and evening ratings separately, 
+ensuring they are within the valid range of 0.0 to 5.0.
+Advantages:
+The primary purpose of the validation routine is to ensure the correctness of the entered ratings. By 
+separating this validation logic, the code becomes modular, with each part having a specific responsibility. 
+This makes the code easier to understand, test, and maintain.
+If the sum and average logic were included within the validation routine, it would violate the principle 
+of separation of concerns. The code would become less modular and harder to reason about, as the validation
+routine would be responsible for both validation and calculation tasks. Separating concerns enhances code 
+readability and maintainability.
+
+b) Code Organization and Clarity:
+Example: The sum and average calculations are performed outside the do-while loops, where the validated ratings
+are accumulated in morningTotal and eveningTotal variables.
+Advantages:
+Placing the sum and average logic separately from the validation routine improves code organization and clarity. 
+It follows a logical flow where the validation is performed first, ensuring the data is valid, and then the 
+calculations are performed on the validated data.
+By separating the logic, it becomes easier to understand the sequence of operations in the code. Developers 
+can follow the code's flow more intuitively, as it progresses from validating inputs to performing calculations.
+This promotes readability and reduces the likelihood of introducing bugs due to complex and intertwined code.
+In summary, using variables and macros instead of hardcoding values provides advantages such as improved 
+readability, flexibility, code consistency, and scalability. Separating validation and calculation logic 
+enhances code modularity, readability, and maintainability, while also promoting code organization and 
+clarity by following a logical flow of operations.

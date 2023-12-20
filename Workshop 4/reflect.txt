@@ -1,0 +1,49 @@
+///////////////////////////////////////////////////////////////////////////
+                               Reflection
+                             Workshop - #4
+Full Name  : TARANDEEP KAUR
+Student ID#: 139389225
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+///////////////////////////////////////////////////////////////////////////
+
+Answer 1 : To make the code easy to read and maintain, I followed certain practices:
+
+Indentation: I indented the code blocks inside loops and conditional statements, such 
+as the while loops and if statements, to visually show their hierarchy and make it easier
+to understand the flow of the program.
+Consistent Formatting: I maintained consistent formatting throughout the code, including the 
+use of spaces between operators, consistent placement of braces, and appropriate use of line 
+breaks. This helps in making the code visually organized and easier to read.
+Descriptive Variable Names: I used descriptive variable names, such as "apples," "oranges,", 
+"pickApples", "shoppingDone", etc., to make it clear what each variable represents. 
+This helped in understanding the purpose of the variables and made the code self-explanatory.
+Comments: I added comments at key points in the code to explain what is happening and provide 
+additional context. This helps in understanding the logic and intentions behind the code.
+
+Answer 2: If nesting were not possible, the workshop code would become more complex and difficult 
+to manage. Nesting allows for the logical grouping of related code blocks, reducing redundancy and 
+improving code readability. Without nesting, the code would depend on additional variables and flags
+to keep track of different stages and conditions. This would lead to longer and more complex(difficult
+ to follow) code, making it harder to understand, debug, and maintain. To explain further, In this
+ workshop code, nesting is used to handle the picking stage of each grocery item. Each item has its 
+own set of prompts, validations, and actions. Without nested logic, the code would become more complex 
+and repetitive. If nesting were not possible, we would need to handle each item's picking stage separately,
+without any logical grouping. This means we would have to repeat the same set of prompts, validations, 
+and actions for each item individually. This will not only increases code duplication but also makes it 
+harder to d understand the overall logic. Any changes or updates would need to be applied to each item 
+individually, making the code prone to errors.
+
+Answer 3: Using a series of "if" optional path constructs instead of the preferred "if/else if" 
+alternative path logic would be inefficient in this scenario. When we have distinct ranges and 
+need to perform unique actions for each range (here, 1 to 5), using "if/else if" allows for efficient 
+decision-making and execution. With "if/else if," the program evaluates the conditions one by one and 
+stops at the first condition that is true, executing the corresponding block of code. In contrast, using 
+a series of "if" statements would require each condition to be checked even after finding a match, 
+leading to unnecessary evaluations and potentially incorrect outputs. The "if/else if" approach ensures 
+that only the relevant code block is executed, making the logic more efficient and accurate.
+
+

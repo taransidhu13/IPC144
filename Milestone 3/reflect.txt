@@ -1,0 +1,85 @@
+/*/////////////////////////////////////////////////////////////////////////
+                        Assignment 1 - Milestone 3
+Full Name  : Tarandeep Kaur
+Student ID#: 139389225
+Email      : tarandeep-kaur6@myseneca.ca
+Section    : ZDD
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+/////////////////////////////////////////////////////////////////////////*/
+
+
+ANSWER 1: 
+Function 1: timeSlotAvailable Function
+Prototype: int timeSlotAvailable(struct Date date, struct Time time, struct Appointment* app, int maxAppointments);
+Explanation: This function determines whether a specified date and time slot are available for scheduling a new appointment.
+It iterates through the existing appointments and checks if there is already an appointment scheduled for the same date and 
+time. If such an appointment exists, the function returns 0 (not available); otherwise, it returns 1 (available).
+Purpose: In a veterinarian clinic, pet owners schedule appointments for their animals. The function timeSlotAvailable is akin
+to the clinic's receptionist who ensures that the veterinarian's schedule doesn't clash with existing appointments. 
+Value: This function is essential for preventing appointment double booking and conflicts. It ensures that new appointments 
+are only scheduled in available time slots, maintaining the clinic's scheduling integrity.
+
+Function 2: nextSlotAvailable Function
+Prototype: int nextSlotAvailable(struct Appointment* app, int maxAppointments);
+Explanation: This function finds the index of the next available time slot for scheduling a new appointment. It 
+iterates through the array of appointments and identifies the first empty slot (indicated by a patient number less than 1).
+Purpose: Imagine a busy day at the veterinarian clinic with back-to-back appointments. The function nextSlotAvailable plays 
+the role of the clinic manager who optimizes the schedule by identifying the next available time slot which can be really helpful for urgent cases. 
+Value: By providing the index of the next available time slot, this function streamlines the appointment scheduling process. 
+It helps efficiently allocate appointment slots, avoiding the need to search through all slots to find an open one.
+
+Function 3: validAppointment Function
+Prototype: int validAppointment(int patientNumber, struct Date date, struct Appointment* app, int maxAppointments);
+Explanation: This function validates whether a patient has a valid appointment on a given date. It iterates through the appointments 
+and checks if there is an appointment scheduled for the specified patient on the specified date.
+Purpose: Consider a scenario where a pet owner has multiple pets and schedules appointments for each of them. The function validAppointment
+acts as the clinic's database manager, ensuring that no pet has overlapping appointments on the same day. Similar to verifying pet identities
+and appointment times, this function confirms if a particular pet already has an appointment on the chosen date.
+Value: This function ensures that appointments are accurately validated before removal. It prevents accidental removal of appointments
+that don't exist for the specified patient and date, maintaining the accuracy of the appointment removal process.
+
+ANSWER 2:The minimization of scanf function calls in the clinic.c source code file is a deliberate design choice 
+aimed at improving user experience, input validation, and code maintainability in the veterinarian clinic management system. 
+By reducing the use of scanf calls to just one, the development team aims to achieve several benefits.
+--User-Friendly Interaction: Excessive scanf calls can lead to a cumbersome user experience, as users are prompted for 
+input multiple times. Minimizing these calls simplifies the interaction, making it easier and more intuitive for users to 
+provide input without feeling overwhelmed.
+--Input Validation and Error Handling: Each scanf call requires input validation and error handling, which can lead to complex
+code structures. By centralizing input collection to a single point, the team can implement robust validation and error
+handling mechanisms, ensuring that user input is properly checked for validity and errors are handled consistently.
+--Code Maintainability: When scanf calls are scattered throughout the code, it can become challenging to maintain and update
+the input validation logic consistently. Consolidating input collection to one location simplifies the task of modifying 
+validation rules or error messages, reducing the chances of inconsistencies or errors in input handling.
+--Reduced Code Duplication: Minimizing scanf calls helps avoid code duplication. Input validation and error handling logic 
+are applied consistently, leading to cleaner and more concise code.
+--Enhanced Testing: Centralizing input collection simplifies testing, as input validation can be thoroughly tested at a 
+single location, ensuring that various input scenarios are properly handled.
+By adopting this approach, the development team ensures that the application remains user-friendly, maintains a high level 
+of code quality, and is easy to maintain and update in the long run. It streamlines the input process and validation, 
+leading to a more robust and efficient veterinarian clinic management system.
+
+ANSWER 3: timeSlotAvailable Function:
+Module: This function is placed in the appointment scheduling (addAppointment)module, as it is essential for ensuring that a given date and
+time slot is available for adding a new appointment.
+Reason: The timeSlotAvailable function's primary purpose is to determine whether a specific date and time slot are available
+for scheduling an appointment. Placing it in the appointment scheduling module aligns with its role in the appointment scheduling
+process. It encapsulates the logic for checking whether a particular time slot is already occupied by another appointment, 
+helping prevent double booking and conflicts.
+
+nextSlotAvailable Function:
+Module: This function also belongs to the appointment scheduling( addAppointment) module.
+Reason: The purpose of the nextSlotAvailable function is to identify the next open time slot for scheduling a new appointment.
+Placing it in the appointment scheduling module is logical since it directly supports the process of finding available time slots
+for adding appointments. By being part of this module, it enhances the efficiency of appointment scheduling by providing a systematic 
+approach to finding suitable time slots.
+
+validAppointment Function:
+Module: This function is placed in the appointment removal (removeAppointment) module, as it is utilized to validate whether an appointment exists for
+a patient on a specific date.
+Reason: The validAppointment function serves the purpose of validating the existence of a specific appointment for a patient on a given
+date. Placing it in the appointment removal module aligns with its role in verifying whether an appointment should be removed. By grouping
+it in the appointment removal module, it ensures that the removal process relies on accurate information about the validity of the appointment.
